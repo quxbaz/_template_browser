@@ -12,7 +12,7 @@
   },
   "scripts": {
     "serve": "webpack-dev-server --content-base=public",
-    "test": "webpack-dev-server --content-base=test --entry=test/"
+    "test": "webpack-dev-server --content-base=public-test --entry=tests"
   },
   "author": "quxbaz",
   "license": "MIT"
