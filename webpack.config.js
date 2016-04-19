@@ -1,6 +1,6 @@
-require('es6-promise').polyfill();
-var path = require('path');
-var resolve = path.resolve;
+require('es6-promise').polyfill()
+var path = require('path')
+var resolve = path.resolve
 
 var config = {
 
@@ -35,6 +35,6 @@ var config = {
     }
   }
 
-};
+}
 
-module.exports = config;
+module.exports = config
