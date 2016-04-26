@@ -18,7 +18,12 @@ var config = {
       {
         test: /\.js$/,
         loader: 'babel',
-        exclude: [/node_modules/, /bower_components/],
+        include: [
+          resolve(__dirname, 'index'),
+          resolve(__dirname, 'lib'),
+          resolve(__dirname, 'src'),
+          resolve(__dirname, 'tests')
+        ],
         query: {
           presets: ['es2015'],
           plugins: ['transform-object-rest-spread']
