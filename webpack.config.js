@@ -5,7 +5,7 @@ var resolve = path.resolve
 var config = {
 
   cache: true,
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   entry: resolve(__dirname, 'index'),
 
   output: {
