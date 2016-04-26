@@ -42,4 +42,28 @@ var config = {
 
 }
 
+if (process.env.NODE_ENV === 'production') {
+
+  Object.assign(config, {
+
+    cache: undefined,
+    devtool: undefined,
+
+    output: {
+      path: 'dist',
+      filename: 'build.min.js'
+    },
+
+    plugins: [
+      new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'})
+      , new webpack.optimize.DedupePlugin(),
+      , new webpack.optimize.AggressiveMergingPlugin(),
+      , new webpack.optimize.UglifyJsPlugin()
+      // , new webpack.optimize.OccurrenceOrderPlugin()
+    ],
+
+  })
+
+}
+
 module.exports = config
