@@ -89,13 +89,14 @@ if (process.env.NODE_ENV === 'test') {
       filename: 'bundle.min.js',
     },
 
-    plugins: config.plugins.concat([
+    // DLL plugin is not necessary in production builds
+    plugins: [
       new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.AggressiveMergingPlugin(),
       new webpack.optimize.UglifyJsPlugin(),
       // , new webpack.optimize.OccurrenceOrderPlugin(),
-    ]),
+    ],
 
   })
 
