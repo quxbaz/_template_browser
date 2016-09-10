@@ -18,6 +18,7 @@ var config = {
       {
         test: /\.js$/,
         loader: 'babel',
+        exclude: /node_modules/,
         include: [
           resolve(__dirname, 'index'),
           resolve(__dirname, 'lib'),
@@ -25,10 +26,18 @@ var config = {
           resolve(__dirname, 'tests'),
         ],
         query: {
-          presets: ['es2015'],
+          presets: ['es2015', 'react'],
           plugins: ['transform-object-rest-spread'],
         },
       },
+      {
+        test: /\.css$/,
+        loaders: ['style', 'css']
+      },
+      // {
+      //   test: /\.less$/,
+      //   loaders: ['style', 'css', 'less']
+      // },
     ],
   },
 
