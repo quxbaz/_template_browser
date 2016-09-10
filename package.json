@@ -1,27 +1,34 @@
 {
+  "dependencies": {
+    "lodash": "^4.15.0",
+    "normalize-css": "^2.3.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  },
   "devDependencies": {
     "babel": "^6.3.26",
-    "babel-core": "^6.4.0",
-    "babel-loader": "^6.2.1",
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
     "babel-plugin-transform-object-rest-spread": "^6.6.5",
-    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "css-loader": "^0.25.0",
     "es6-promise": "^3.0.2",
     "expect": "^1.16.0",
+    "style-loader": "^0.13.1",
     "tape": "^4.6.0",
     "webpack": "^1.12.11",
     "webpack-dashboard": "^0.1.8",
     "webpack-dev-server": "^1.15.1"
   },
   "scripts": {
-    "serve": "webpack-dashboard -- webpack-dev-server --content-base=public",
-    "test": "webpack-dashboard -- webpack-dev-server --content-base=public_test --entry=tests",
+    "serve": "webpack-dev-server --content-base=public",
+    "test": "webpack-dev-server --content-base=public_test --entry=tests",
+    "serve-dashboard": "webpack-dashboard -- webpack-dev-server --content-base=public",
+    "test-dashboard": "webpack-dashboard -- webpack-dev-server --content-base=public_test --entry=tests",
     "build": "NODE_ENV=production webpack --progress --colors",
     "analyze": "webpack --json | webpack-bundle-size-analyzer"
   },
   "author": "quxbaz",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1"
-  }
+  "license": "MIT"
 }
