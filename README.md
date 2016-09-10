@@ -10,7 +10,7 @@ port=8000 npm run serve-dashboard  // Same as above but with webpack-dashboard
 ### Running the test server
 ```
 port=8000 npm run test
-port=8000 npm run test-dashboard  // with webpack-dashboard
+port=8000 npm run test-dashboard  // With webpack-dashboard
 ```
 
 
