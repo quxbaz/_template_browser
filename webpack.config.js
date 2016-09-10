@@ -7,7 +7,10 @@ var config = {
 
   cache: true,
   devtool: 'source-map',
-  entry: resolve(__dirname, 'index'),
+  entry: [
+    'regenerator-runtime/runtime',
+    resolve(__dirname, 'index'),
+  ],
 
   node: {
     fs: 'empty',
@@ -37,6 +40,8 @@ var config = {
             'transform-class-properties',
             'syntax-trailing-function-commas',
             'transform-export-extensions',
+            'transform-async-to-generator',
+            'transform-regenerator',
           ],
         },
       },
@@ -68,7 +73,11 @@ var config = {
 
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'test') {
+
+  config.entry[1] = resolve('tests/')
+
+} else if (process.env.NODE_ENV === 'production') {
 
   Object.assign(config, {
 
