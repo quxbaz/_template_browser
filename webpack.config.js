@@ -59,8 +59,11 @@ var config = {
   plugins: [
     new webpack.DllReferencePlugin({
       context: '.',
-      manifest: require('./build/vendor-manifest.json'),
-    })
+      manifest: require(resolve(__dirname, 'build/vendor-manifest.json')),
+    }),
+    new webpack.DefinePlugin({
+      'IS_HOT': process.env.IS_HOT === 'true',
+    }),
   ],
 
   resolve: {
