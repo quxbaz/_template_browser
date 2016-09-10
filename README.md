@@ -3,20 +3,14 @@
 ### Running your application
 ```
 port=8000 npm run serve
-```
-Same thing as above but with webpack-dashboard display:
-```
-port=8000 npm run serve-dashboard
+port=8000 npm run serve-dashboard  // Same as above but with webpack-dashboard
 ```
 
 
 ### Running the test server
 ```
 port=8000 npm run test
-```
-With webpack-dashboard display:
-```
-port=8000 npm run test-dashboard
+port=8000 npm run test-dashboard  // with webpack-dashboard
 ```
 
 
