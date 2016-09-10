@@ -27,7 +27,7 @@
     "test": "webpack-dev-server --content-base=public_test --entry=tests",
     "serve-dashboard": "webpack-dashboard -- webpack-dev-server --content-base=public",
     "test-dashboard": "webpack-dashboard -- webpack-dev-server --content-base=public_test --entry=tests",
-    "build": "NODE_ENV=production webpack --progress --colors",
+    "build": "NODE_ENV=production npm run build-vendor && NODE_ENV=production webpack --progress --colors",
     "build-vendor": "webpack --config vendor.webpack.config.js",
     "analyze": "webpack --json | webpack-bundle-size-analyzer"
   },
