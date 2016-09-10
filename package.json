@@ -19,5 +19,9 @@
     "analyze": "webpack --json | webpack-bundle-size-analyzer"
   },
   "author": "quxbaz",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  }
 }
