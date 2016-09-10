@@ -8,11 +8,13 @@
     "es6-promise": "^3.0.2",
     "expect": "^1.16.0",
     "tape": "^4.6.0",
-    "webpack": "^1.12.11"
+    "webpack": "^1.12.11",
+    "webpack-dashboard": "^0.1.8",
+    "webpack-dev-server": "^1.15.1"
   },
   "scripts": {
-    "serve": "webpack-dev-server --content-base=public",
-    "test": "webpack-dev-server --content-base=public_test --entry=tests",
+    "serve": "webpack-dashboard -- webpack-dev-server --content-base=public",
+    "test": "webpack-dashboard -- webpack-dev-server --content-base=public_test --entry=tests",
     "build": "NODE_ENV=production webpack --progress --colors",
     "analyze": "webpack --json | webpack-bundle-size-analyzer"
   },
