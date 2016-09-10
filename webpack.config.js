@@ -32,7 +32,12 @@ var config = {
         ],
         query: {
           presets: ['es2015', 'react'],
-          plugins: ['transform-object-rest-spread', 'transform-class-properties'],
+          plugins: [
+            'transform-object-rest-spread',
+            'transform-class-properties',
+            'syntax-trailing-function-commas',
+            'transform-export-extensions',
+          ],
         },
       },
       {
