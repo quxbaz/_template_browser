@@ -1,13 +1,14 @@
 # Webapp Template
 
-### Running your application:
+### Running your application
 ```
 port=8000 npm run serve
 ```
 
 Same thing as above but with webpack-dashboard display:
-
-`port=8000 npm run serve-dashboard`
+```
+port=8000 npm run serve-dashboard
+```
 
 
 
