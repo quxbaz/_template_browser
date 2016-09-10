@@ -1,12 +1,17 @@
 require('es6-promise').polyfill()
 var path = require('path')
 var resolve = path.resolve
+var webpack = require('webpack')
 
 var config = {
 
   cache: true,
   devtool: 'source-map',
   entry: resolve(__dirname, 'index'),
+
+  node: {
+    fs: 'empty',
+  },
 
   output: {
     filename: 'bundle.js',
@@ -41,6 +46,13 @@ var config = {
     ],
   },
 
+  plugins: [
+    new webpack.DllReferencePlugin({
+      context: '.',
+      manifest: require('./build/vendor-manifest.json'),
+    })
+  ],
+
   resolve: {
     root: resolve(__dirname),
     extensions: ['', '.js'],
@@ -63,13 +75,13 @@ if (process.env.NODE_ENV === 'production') {
       filename: 'build.min.js',
     },
 
-    plugins: [
+    plugins: config.plugins.concat([
       new webpack.DefinePlugin({'process.env.NODE_ENV': '"production"'}),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.AggressiveMergingPlugin(),
       new webpack.optimize.UglifyJsPlugin(),
       // , new webpack.optimize.OccurrenceOrderPlugin(),
-    ],
+    ]),
 
   })
 
