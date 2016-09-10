@@ -21,6 +21,7 @@
     "css-loader": "^0.25.0",
     "es6-promise": "^3.0.2",
     "expect": "^1.16.0",
+    "react-hot-loader": "^3.0.0-beta.3",
     "regenerator-runtime": "^0.9.5",
     "style-loader": "^0.13.1",
     "tape": "^4.6.0",
@@ -29,10 +30,12 @@
     "webpack-dev-server": "^1.15.1"
   },
   "scripts": {
-    "serve": "webpack-dev-server --content-base=public",
-    "serve-dashboard": "webpack-dashboard -- webpack-dev-server --content-base=public",
-    "test": "NODE_ENV=test webpack-dev-server --content-base=public_test",
-    "test-dashboard": "NODE_ENV=test webpack-dashboard -- webpack-dev-server --content-base=public_test",
+    "serve": "webpack-dev-server --content-base=public --port=$port",
+    "serve-dashboard": "webpack-dashboard -- webpack-dev-server --content-base=public --port=$port",
+    "test": "NODE_ENV=test webpack-dev-server --content-base=public_test --port=$port",
+    "test-dashboard": "NODE_ENV=test webpack-dashboard -- webpack-dev-server --content-base=public_test --port=$port",
+    "serve-hot": "IS_HOT=true node hot-server.js",
+    "test-hot": "IS_HOT=true NODE_ENV=test node hot-server.js",
     "build": "NODE_ENV=production webpack --progress --colors",
     "build-vendor": "webpack --config vendor.webpack.config.js",
     "analyze": "webpack --json | webpack-bundle-size-analyzer"
