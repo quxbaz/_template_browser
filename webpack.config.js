@@ -71,8 +71,8 @@ if (process.env.NODE_ENV === 'production') {
     devtool: undefined,
 
     output: {
-      path: 'dist',
-      filename: 'build.min.js',
+      path: 'build',
+      filename: 'bundle.min.js',
     },
 
     plugins: config.plugins.concat([
