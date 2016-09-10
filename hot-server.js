@@ -1,5 +1,5 @@
 /*
-  Script for running react hot loader enabled server.
+  Script for running react-hot-loader enabled server.
 */
 
 var path = require('path')
