@@ -20,27 +20,3 @@ module.exports = {
     })
   ],
 }
-
-// module.exports = {
-//   entry: {
-//     vendor: [path.join(__dirname, 'vendor/index.js')],
-//   },
-//   output: {
-//     path: path.join(__dirname, 'build', 'dll'),
-//     filename: 'dll.[name].js',
-//     library: '[name]',
-//   },
-//   plugins: [
-//     new webpack.DllPlugin({
-//       path: path.join(__dirname, 'dll', '[name]-manifest.json'),
-//       name: '[name]',
-//       context: path.resolve(__dirname, 'vendor'),
-//     }),
-//     new webpack.optimize.OccurenceOrderPlugin(),
-//     new webpack.optimize.UglifyJsPlugin(),
-//   ],
-//   resolve: {
-//     root: path.resolve(__dirname, 'vendor'),
-//     modulesDirectories: ['node_modules'],
-//   },
-// }
