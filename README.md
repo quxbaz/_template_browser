@@ -22,6 +22,6 @@ port=8000 npm run test-dashboard
 
 ### Running with hot module and react-hot-reloader
 ```
-port=8000 npm run serve-hot
-port=8000 npm run test-hot
+port=8000 npm run serve-hot  // app
+port=8000 npm run test-hot   // tests
 ```
