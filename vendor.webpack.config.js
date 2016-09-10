@@ -1,8 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
 
-// <TODO> If NODE_ENV === 'production', minify code
-
 module.exports = {
   node: {
     fs: 'empty',
