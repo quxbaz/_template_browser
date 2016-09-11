@@ -20,7 +20,6 @@
     "babel-preset-react": "^6.11.1",
     "css-loader": "^0.25.0",
     "es6-promise": "^3.0.2",
-    "expect": "^1.16.0",
     "react-hot-loader": "^3.0.0-beta.3",
     "regenerator-runtime": "^0.9.5",
     "style-loader": "^0.13.1",
