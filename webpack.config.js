@@ -39,6 +39,7 @@ var config = {
             'transform-object-rest-spread',
             'transform-class-properties',
             'syntax-trailing-function-commas',
+            'add-module-exports',
             'transform-export-extensions',
             'transform-async-to-generator',
             'transform-regenerator',
