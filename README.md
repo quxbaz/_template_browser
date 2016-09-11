@@ -1,6 +1,6 @@
 # Webapp Template
 
-## Getting set up
+### Getting set up
 ```
 npm i
 npm run build-vendor  // Builds vendor files for much faster compilations
