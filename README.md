@@ -1,5 +1,12 @@
 # Webapp Template
 
+## Getting set up
+```
+npm i
+npm run build-vendor  // Builds vendor files for much faster compilations
+```
+
+
 ### Running your application
 ```
 port=8000 npm run serve
